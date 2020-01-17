@@ -1,1 +1,9 @@
-<p>chat-button-view works!</p>
+<div>
+  <button class="chat-btn" mat-fab color="primary" (click)="toggleChatUI()">
+    <mat-icon *ngIf="!isChatUiShown">question_answer</mat-icon>
+    <mat-icon *ngIf="isChatUiShown">clear</mat-icon>
+  </button>
+  <div *ngIf="isChatUiShown" class="chat-ui">
+    <lib-chat-window></lib-chat-window>
+  </div>
+</div>

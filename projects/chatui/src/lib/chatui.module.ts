@@ -13,8 +13,15 @@ import { MsgComponent } from './msg/msg.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
 import { ChatButtonViewComponent } from './chat-button-view/chat-button-view.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
-  declarations: [ChatWindowComponent, MsgComponent, TimeAgoPipe, ChatButtonViewComponent],
+  declarations: [
+    ChatWindowComponent,
+    MsgComponent,
+    TimeAgoPipe,
+    ChatButtonViewComponent
+  ],
   imports: [
     MatToolbarModule,
     MatCardModule,
@@ -25,8 +32,11 @@ import { ChatButtonViewComponent } from './chat-button-view/chat-button-view.com
     MatChipsModule,
     FormsModule,
     FlexLayoutModule,
-    CommonModule
+    CommonModule,
+    MatButtonModule,
+    MatIconModule
   ],
-  exports: [ChatWindowComponent]
+  entryComponents: [ChatWindowComponent],
+  exports: [ChatWindowComponent, ChatButtonViewComponent]
 })
 export class ChatuiModule {}

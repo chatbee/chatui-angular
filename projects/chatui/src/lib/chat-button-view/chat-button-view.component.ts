@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chat-button-view.component.scss']
 })
 export class ChatButtonViewComponent implements OnInit {
+  public isChatUiShown = false;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  public toggleChatUI() {
+    this.isChatUiShown = !this.isChatUiShown;
   }
-
+  ngOnInit() {}
 }

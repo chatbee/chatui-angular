@@ -1,3 +1,5 @@
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ChatuiModule } from './../../../chatui/src/lib/chatui.module';
@@ -11,7 +13,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     ChatuiModule,
     BrowserAnimationsModule,
-    MatChipsModule
+    MatButtonModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
