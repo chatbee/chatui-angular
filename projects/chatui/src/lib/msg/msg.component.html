@@ -1,0 +1,26 @@
+<div fxLayout="row wrap" [ngStyle]="setMargin()">
+  <div fxFlex="100%" [fxLayoutAlign]="alignment">
+    <mat-chip-avatar
+      *ngIf="message.align === 'left'"
+      style="margin-right: 10px;"
+      (click)="toggleDate()"
+    >
+      <img src="https://material.angular.io/assets/img/examples/shiba1.jpg" />
+    </mat-chip-avatar>
+    <mat-card class="mw-50" [ngStyle]="setColor()" (click)="toggleDate()">{{
+      message.msg
+    }}</mat-card>
+    <mat-chip-avatar
+      *ngIf="message.align === 'right'"
+      style="margin-left: 10px;"
+      (click)="toggleDate()"
+    >
+      <img src="https://material.angular.io/assets/img/examples/shiba1.jpg" />
+    </mat-chip-avatar>
+  </div>
+  <div fxFlex="100%" *ngIf="shouldShowDate">
+    <span [fxLayoutAlign]="alignment">
+      <small>{{ message.date | timeAgo }}</small>
+    </span>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+mat-card-content {
+  padding-top: 20px;
+}
+.margin-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+mat-form-field {
+  padding-top: 20px;
+  width: 100%;
+}
+:host {
+  min-height: 250px;
+  max-height: 700px;
+  height: calc(100% - 120px);
+}
+mat-card {
+  min-height: 250px;
+  max-height: 700px;
+  height: calc(100% - 120px);
+}
+.bottom {
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  position: absolute;
+}

@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-toolbar color="primary">Chat</mat-toolbar>
+  <mat-card-content>
+    <div fxFlexFill>
+      <div *ngFor="let message of messages | async">
+        <lib-msg [message]="message"></lib-msg>
+        <ng-template #container> </ng-template>
+      </div>
+    </div>
+    <div class="bottom">
+      <mat-divider class="margin-10"></mat-divider>
+      <form>
+        <mat-form-field>
+          <input
+            autocomplete="off"
+            class="full-width"
+            matNativeControl
+            matInput
+            (keypress)="userTyping($event)"
+            placeholder="Type your message"
+            type="text"
+            value=""
+            [(ngModel)]="userInput"
+            name="chatInput"
+          />
+        </mat-form-field>
+      </form>
+    </div>
+  </mat-card-content>
+</mat-card>
