@@ -1,0 +1,17 @@
+img {
+  max-width: 30px;
+  max-height: 30px;
+  border-radius: 50%;
+}
+small {
+  padding-top: 2px;
+  font-size: 9px;
+  color: grey;
+  position: relative;
+}
+.mw-50 {
+  max-width: 50%;
+}
+mat-chip-avatar {
+  align-self: flex-end;
+}
