@@ -33,8 +33,8 @@ steps:
   condition: succeededOrFailed()
   inputs:
     codeCoverageTool: Cobertura
-    summaryFileLocation: '**/cobertura-coverage.xml'
-    reportDirectory: '**/coverage'
+    summaryFileLocation: '$(Build.SourcesDirectory)/coverage/chatui/cobertura-coverage.xml'
+    reportDirectory: '$(Build.SourcesDirectory)/coverage'
     failIfCoverageEmpty: true
 - task: PublishTestResults@2
   inputs:
