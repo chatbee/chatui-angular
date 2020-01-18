@@ -1,6 +1,7 @@
-# ChatuiAngular
+# Chatui-Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+[![Build Status](https://dev.azure.com/chatbees/platform/_apis/build/status/chatbee.chatui-angular?branchName=master)](https://dev.azure.com/chatbees/platform/_build/latest?definitionId=3&branchName=master)
+![Code Coverage](https://img.shields.io/azure-devops/coverage/chatbees/platform/3/master)
 
 ## Development server
 
