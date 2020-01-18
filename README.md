@@ -1,5 +1,6 @@
 # Chatui-Angular
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1ab344c3e16b4fd0bcdce62017773552)](https://app.codacy.com/gh/chatbee/chatui-angular?utm_source=github.com&utm_medium=referral&utm_content=chatbee/chatui-angular&utm_campaign=Badge_Grade_Settings)
 [![Build Status](https://dev.azure.com/chatbees/platform/_apis/build/status/chatbee.chatui-angular?branchName=master)](https://dev.azure.com/chatbees/platform/_build/latest?definitionId=3&branchName=master)
 ![Code Coverage](https://img.shields.io/azure-devops/coverage/chatbees/platform/3/master)
 
