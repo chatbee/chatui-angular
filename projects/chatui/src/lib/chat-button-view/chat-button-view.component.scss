@@ -1,0 +1,17 @@
+.chat-btn {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 1000;
+}
+.chat-ui {
+  position: fixed;
+  bottom: 0px;
+  right: 5%;
+  min-width: 350px;
+  height: calc(100% - 150px);
+  min-height: 350px;
+  max-height: 750px;
+  width: 20%;
+  z-index: 999;
+}
