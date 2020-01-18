@@ -17,12 +17,12 @@ module.exports = function(config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     junitReporter: {
-      outputDir: require("path").join(__dirname, "./coverage"),
+      outputDir: require("path").join(__dirname, "../../coverage"),
       outputFile: "RESULTS.xml"
     },
     coverageIstanbulReporter: {
       dir: require("path").join(__dirname, "../../coverage/chatui"),
-      reports: ["html", "lcovonly", "text-summary"],
+      reports: ["html", "lcovonly", "text-summary", "cobertura"],
       fixWebpackSourcePaths: true
     },
     reporters: ["progress", "kjhtml", "junit"],
