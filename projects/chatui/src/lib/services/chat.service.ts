@@ -15,7 +15,7 @@ import { map } from 'rxjs/operators';
 export class ChatService {
   private readonly botSaysOn = 'BotSays';
   private readonly userSaysOn = 'UserSays';
-  private connection: HubConnection;
+  public connection: HubConnection;
   constructor(private settings: SettingsService) {
     if (!settings.isSettingsSet()) {
       console.warn('No settings are set!');
