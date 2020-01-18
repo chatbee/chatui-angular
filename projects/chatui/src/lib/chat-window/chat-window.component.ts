@@ -21,11 +21,9 @@ export class ChatWindowComponent implements OnInit, OnDestroy {
     if (event.key !== 'Enter') {
       return;
     }
-    this.chat
-      .userSays(new ChatMessage(this.userInput, this.instanceId))
-      .finally(() => {
-        this.userInput = '';
-      });
+    const value = (' ' + this.userInput).slice(1); // copies the string
+    this.userInput = '';
+    this.chat.userSays(new ChatMessage(value, this.instanceId));
   }
 
   private addToUI(chatMsg: ChatMessage) {
@@ -35,10 +33,8 @@ export class ChatWindowComponent implements OnInit, OnDestroy {
     } else {
       msg = new ChatMsg(chatMsg.message, new Date(), '#6639fc', 'right');
     }
-    setTimeout(() => {
-      this.msgs.push(msg);
-      this.messages.next(this.msgs);
-    }, 1000);
+    this.msgs.push(msg);
+    this.messages.next(this.msgs);
   }
 
   ngOnDestroy() {
