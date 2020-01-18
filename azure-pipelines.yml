@@ -46,7 +46,7 @@ steps:
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'build --prod'
+    customCommand: 'run build --prod'
     workingDir: '$(Build.SourcesDirectory)'
 - task: PublishBuildArtifacts@1
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
