@@ -20,7 +20,7 @@
   </div>
   <div fxFlex="100%" *ngIf="shouldShowDate">
     <span [fxLayoutAlign]="alignment">
-      <small>{{ message.date | timeAgo }}</small>
+      <small>{{ message.date.toISOString() | timeAgo }}</small>
     </span>
   </div>
 </div>
