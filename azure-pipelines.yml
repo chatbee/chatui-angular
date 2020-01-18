@@ -21,20 +21,20 @@ steps:
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'run test-headless'
+    customCommand: 'run lint'
     workingDir: '$(Build.SourcesDirectory)'
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'run lint'
+    customCommand: 'run test-headless'
     workingDir: '$(Build.SourcesDirectory)'
 - task: PublishCodeCoverageResults@1
   displayName: 'Publish nodejs code coverage results'
   condition: succeededOrFailed()
   inputs:
     codeCoverageTool: Cobertura
-    summaryFileLocation: '$(Build.SourcesDirectory)/coverage/cobertura-coverage.xml'
-    reportDirectory: '$(Build.SourcesDirectory)/coverage'
+    summaryFileLocation: '**/cobertura-coverage.xml'
+    reportDirectory: '**/coverage'
     failIfCoverageEmpty: true
 - task: PublishTestResults@2
   inputs:
